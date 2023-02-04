@@ -1,13 +1,19 @@
 @{
     ViewData["Title"] = "Login";
 }
+<style>
+    .form-control{
+        width: 230px;
+        margin: auto;
+    }
+</style>
 <!--<div class="container">-->
     <div class="row justify-content-md-center">
         <div class="jumbotron col-6">
             <h1>Bem vindo ao sistema Biblioteca</h1>
             <form asp-action="Login" method="POST">
                 <div class="form-group">
-                    <input type="text" placeholder="Login" class="form-control" name="login" />
+                    <input type="text" placeholder="Login" class="form-control" name="login"/>
                 </div>
                 <div class="form-group">
                     <input type="password" placeholder="Senha" class="form-control" name="senha"/>
