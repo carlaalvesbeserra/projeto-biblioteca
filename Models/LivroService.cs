@@ -22,6 +22,7 @@ namespace Biblioteca.Models
                 Livro livro = bc.Livros.Find(l.Id);
                 livro.Autor = l.Autor;
                 livro.Titulo = l.Titulo;
+                livro.Ano = l.Ano;
 
                 bc.SaveChanges();
             }
@@ -45,7 +46,6 @@ namespace Biblioteca.Models
                         case "Titulo":
                             query = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro));
                         break;
-
                         default:
                             query = bc.Livros;
                         break;
